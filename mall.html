@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상점</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        section {
+            padding: 20px;
+        }
+        .product {
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            padding: 10px;
+            display: inline-block;
+            width: 30%;
+            vertical-align: top;
+            box-sizing: border-box;
+        }
+        .product img {
+            width: 100%;
+        }
+        .product h3 {
+            margin-top: 0;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>쇼핑몰</h1>
+    </header>
+    <nav>
+        <a href="#">홈</a>
+        <a href="#">제품</a>
+        <a href="#">서비스</a>
+        <a href="#">소개</a>
+    </nav>
+    <section>
+        <div class="product">
+            <img src="product1.jpg" alt="제품 1">
+            <h3>상품 1</h3>
+            <p>1,000원</p>
+            <button onclick="addToCart(this)">장바구니에 추가</button>
+        </div>
+        <div class="product">
+            <img src="product2.jpg" alt="제품 2">
+            <h3>상품 2</h3>
+            <p>1,000원</p>
+            <button onclick="addToCart(this)">장바구니에 추가</button>
+        </div>
+        <div class="product">
+            <img src="product3.jpg" alt="제품 3">
+            <h3>상품 3</h3>
+            <p>1,000원</p>
+            <button onclick="addToCart(this)">장바구니에 추가</button>
+        </div>
+    </section>
+    <footer>
+        <marquee behavior="" direction="left">쇼핑몰 웹사이트</marquee>
+    </footer>
+    <script>
+        function addToCart(button) {
+            var productName = button.parentNode.querySelector('h3').innerText;
+            alert(productName + '을(를) 장바구니에 추가했습니다.');
+        }
+    </script>
+</body>
+</html>
