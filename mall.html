@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>상점</title>
+    <script>
+        function addToCart(button) {
+            var productName = button.parentNode.querySelector('h3').innerText;
+            alert(productName + '을(를) 장바구니에 추가했습니다.');
+        }
+    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -141,11 +147,5 @@
     <footer>
         <marquee behavior="" direction="left">쇼핑몰 웹사이트</marquee>
     </footer>
-    <script>
-        function addToCart(button) {
-            var productName = button.parentNode.querySelector('h3').innerText;
-            alert(productName + '을(를) 장바구니에 추가했습니다.');
-        }
-    </script>
 </body>
 </html>
